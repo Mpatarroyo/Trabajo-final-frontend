@@ -9,15 +9,14 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding-top: 94px;
+    padding-top: 90px;
 }
 
 .img-logoPrincipal {
-    display: block;
-    align-self: center;
-    width: min(340px, 100%);
-    height: auto;
-    margin: 8px 0;
+
+    padding: 4px;
+    margin: 10px 0;
+    width: 300px;
 }
 
 .barraNavegacion-1-1 {
@@ -26,10 +25,8 @@
     left: 0;
     z-index: 100;
     display: grid;
-    align-items: center;
     grid-template-columns: 30% 70%;
     width: 100%;
-    min-height: 94px;
     background-color: white;
     padding: 0 20px;
     box-shadow: 0 8px 20px rgba(47, 38, 19, 0.14);
@@ -155,7 +152,7 @@
         transition: transform 0.5s ease, opacity 0.2s ease;
     }
 
-    .menu-toggle:focus-visible + .boton-menu {
+    .menu-toggle:focus-visible+.boton-menu {
         outline: 3px solid rgba(189, 154, 42, 0.55);
         outline-offset: 3px;
     }
@@ -175,7 +172,7 @@
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
     }
 
-    .menu-toggle:checked ~ .barraNavegacion-1-2 {
+    .menu-toggle:checked~.barraNavegacion-1-2 {
         display: flex;
     }
 
@@ -192,15 +189,15 @@
         display: none;
     }
 
-    .menu-toggle:checked + .boton-menu span:first-child {
+    .menu-toggle:checked+.boton-menu span:first-child {
         transform: translateY(7px) rotate(45deg);
     }
 
-    .menu-toggle:checked + .boton-menu span:nth-child(2) {
+    .menu-toggle:checked+.boton-menu span:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggle:checked + .boton-menu span:last-child {
+    .menu-toggle:checked+.boton-menu span:last-child {
         transform: translateY(-7px) rotate(-45deg);
     }
 }
@@ -334,7 +331,7 @@
     }
 }
 
-@media (max-width: 368px) { 
+@media (max-width: 368px) {
 
     .img-logoPrincipal {
         width: 200px;
@@ -394,7 +391,7 @@
     line-height: 1.2;
 }
 
-.seccion-contenido > p:last-child {
+.seccion-contenido>p:last-child {
     max-width: 850px;
     margin-top: 18px;
     color: #655a3e;
@@ -534,6 +531,7 @@
 }
 
 @media (max-width: 600px) {
+
     .info-comoTrabajamos,
     .contactos-destacados {
         padding: 56px 20px;
@@ -579,33 +577,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero,
-    .contactos-destacados {
-        transition: none;
-    }
-
-    .hero:hover,
-    .contactos-destacados:hover {
-        transform: none;
-    }
-
-    .seccion-tarjeta {
-        transition: none;
-    }
-
-    .seccion-tarjeta:hover {
-        transform: none;
-    }
-
-    .seccion-imagen img {
-        transition: none;
-    }
-
-    .seccion-imagen img:hover,
-    .seccion-tarjeta:hover .seccion-imagen img {
-        filter: drop-shadow(0 0 12px rgba(46, 38, 23, 0.38)) drop-shadow(0 14px 12px rgba(46, 38, 23, 0.28));
-        transform: translateY(-10px);
-    }
 
     .contacto-card,
     .contacto-icono {
